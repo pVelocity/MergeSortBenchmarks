@@ -20,11 +20,9 @@ int temp[ARRAY_SIZE];
 
 void mergeSort(int arr[],int low,int mid,int high){
     
-    int i,m,k,l;
-    
-    l=low;
-    i=low;
-    m=mid+1;
+    int l = low;
+    int i = low;
+    int m = mid+1;
     
     while((l<=mid)&&(m<=high)){
         
@@ -40,16 +38,10 @@ void mergeSort(int arr[],int low,int mid,int high){
     }
     
     if(l>mid){
-        for(k=m;k<=high;k++){
-            temp[i]=arr[k];
-            i++;
-        }
+        memcpy(&temp[i], &arr[m], sizeof(int) * (high - m + 1));
     }
     else{
-        for(k=l;k<=mid;k++){
-            temp[i]=arr[k];
-            i++;
-        }
+        memcpy(&temp[i], &arr[l], sizeof(int) * (mid - l + 1));
     }
     
     memcpy(&arr[low], &temp[low], sizeof(int) * (high - low + 1));
@@ -73,7 +65,7 @@ int main(int argc, const char * argv[]) {
     
     char buffer[BUFFER_SIZE];
     int num[ARRAY_SIZE];
-
+    
     int numRead = 0;
     while(fgets(buffer, BUFFER_SIZE, fp) && numRead < ARRAY_SIZE) {
         sscanf(buffer, "%d", &num[numRead]);
@@ -92,7 +84,7 @@ int main(int argc, const char * argv[]) {
         printf("%d\n", num[numRead]);
     }
     
-    printf("Elapsed Time: %0.6f (secs)\n", (end.tv_usec - start.tv_usec) / 1000000.0);
-
+    printf("time: %0.6f (secs)\n", (end.tv_usec - start.tv_usec) / 1000000.0);
+    
     return 0;
 }

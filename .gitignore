@@ -5,6 +5,7 @@
 # *.[oa]
 # *~
 
+.recommenders/
 .metadata/
 .DS_Store
 .project
@@ -12,8 +13,10 @@ test/
 *.swp
 *~.nib
 **/DerivedData/
+**/bin/*.class
 build/
 *.pbxuser
 *.perspective
 *.perspectivev3
 **/xcuserdata/
+**/MergeSort.jar
