@@ -124,9 +124,18 @@ Using:
     Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)
     Target: x86_64-apple-macosx10.9
     
-But the compiled version of the program is run, using the scheme configured in Xcode. The Swift version consistently scores just above the 1+ ms mark.
+But the compiled version of the program is run, using the scheme configured in Xcode. The Swift version consistently scores just above the 1+ ms mark. We did not disable the safety checks, and ran with the default Swift compiler settings that came with Xcode. You can double check the scheme configuration if you like.
 
 ## Conclusion
+
+Summary of the results
+
+Environment | Approx Timings | % Difference From C
+:----------:|---------------:|-------------------:
+C           |     0.8 ms     | 0 %
+Java        |     3.5 ms     | 338 %
+Node.js     |    28.0 ms     | 3400 %
+Swift       |     1.2 ms     | 50 %
 
 It seems Swift has a lot of potential. Unfortunately as of Swift 2.2, the support for Windows is still missing. The above results look very promising and I look forward to Swift 3.0 and will definitely keep my ears perked for future development of Swift. I have already begin exploring possibilities offered by the following frameworks:
 
