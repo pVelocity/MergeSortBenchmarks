@@ -11,7 +11,7 @@ import Foundation
 let BUFFER_SIZE = 1024
 let INT_SIZE = 10000
 
-let filename = Process.arguments[1]
+let filename = "../../../../../../TestData.txt"
 
 let text = try String(contentsOfFile: filename, encoding: NSUTF8StringEncoding)
 var lines:[String] = text.componentsSeparatedByString("\n")
@@ -87,4 +87,4 @@ for var i in nums.reverse() {
 
 let et = NSString(format: "%.6f", (end - start));
 
-print("Elapsed time \(et) (secs)");
+print("Elapsed time: \(et) (secs)");

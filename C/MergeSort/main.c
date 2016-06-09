@@ -61,7 +61,7 @@ void partition(int arr[],int low,int high){
 
 int main(int argc, const char * argv[]) {
     
-    FILE* fp = fopen(argv[1], "r");
+    FILE* fp = fopen("../../../../../../TestData.txt", "r");
     
     char buffer[BUFFER_SIZE];
     int num[ARRAY_SIZE];
@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
         printf("%d\n", num[numRead]);
     }
     
-    printf("time: %0.6f (secs)\n", (end.tv_usec - start.tv_usec) / 1000000.0);
+    printf("Elapsed time: %0.6f (secs)\n", (end.tv_usec - start.tv_usec) / 1000000.0);
     
     return 0;
 }
