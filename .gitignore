@@ -13,7 +13,7 @@ test/
 *.swp
 *~.nib
 **/DerivedData/
-**/bin/*.class
+**/bin
 build/
 *.pbxuser
 *.perspective
